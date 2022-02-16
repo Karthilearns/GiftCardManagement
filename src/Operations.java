@@ -11,7 +11,7 @@ public class Operations {
    {
        for(User u:Main.usersList)
        {
-           if(User.getName().equals(username))
+           if(u.getName().equals(username))
            {
                return u;
            }

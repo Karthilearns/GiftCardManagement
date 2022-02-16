@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GiftCard {
-    static String card_number;
-    static int balance_amount;
-    static String card_holder;
-    static List<Transaction> transactions = new ArrayList<>();
+     String card_number;
+     int balance_amount;
+     String card_holder;
+     List<Transaction> transactions = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -17,28 +17,28 @@ public class GiftCard {
                 '}';
     }
 
-    public static String getCard_number() {
+    public  String getCard_number() {
         return card_number;
     }
 
-    public static void setCard_number(String card_number) {
-        card_number = card_number;
+    public  void setCard_number(String _card_number) {
+        card_number = _card_number;
     }
 
-    public static int getBalance_amount() {
+    public  int getBalance_amount() {
         return balance_amount;
     }
 
-    public static void setBalance_amount(int balance_amount) {
-        balance_amount = balance_amount;
+    public  void setBalance_amount(int balance_amount) {
+        this.balance_amount = balance_amount;
     }
 
-    public static String getCard_holder() {
+    public  String getCard_holder() {
         return card_holder;
     }
 
-    public static void setCard_holder(String card_holder) {
-        card_holder = card_holder;
+    public  void setCard_holder(String card_holder) {
+        this.card_holder = card_holder;
     }
 
     public GiftCard(String card_number, int balance_amount, String card_holder) {
@@ -47,7 +47,7 @@ public class GiftCard {
         this.card_holder = card_holder;
     }
 
-    public static void addTransaction(Transaction transaction)
+    public  void addTransaction(Transaction transaction)
     {
         transactions.add(transaction);
     }

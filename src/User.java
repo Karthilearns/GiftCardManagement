@@ -2,47 +2,50 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-   private static String name;
-   private static List<Transaction> transactionList = new ArrayList<>();
-   private static List<GiftCard> giftCards = new ArrayList<>();
+   private  String name;
+   private  List<Transaction> transactionList = new ArrayList<>();
+   private  List<GiftCard> giftCards = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", transactionList=" + transactionList +
+                ", giftCards=" + giftCards +
+                '}';
+    }
 
-
-    public static List<GiftCard> getGiftCards()
+    public  List<GiftCard> getGiftCards()
    {
        return  giftCards;
    }
-   public static void setName(String _name)
+   public  void setName(String _name)
    {
-       name = _name;
+       this.name = _name;
    }
-   public static String getName()
+   public  String getName()
    {
        return name;
    }
-    public User(String name) {
+    public User(String name)
+    {
         this.name = name;
     }
 
-    public static void addGiftCard(GiftCard giftCard)
+    public  void addGiftCard(GiftCard giftCard)
     {
-        System.out.println(giftCards);
+
         giftCards.add(giftCard);
-        System.out.println(giftCard);
-        System.out.println(giftCards);
     }
 
-    public static  void addTrasaction(Transaction transaction)
+
+
+    public  void addTransaction(Transaction transaction)
     {
         transactionList.add(transaction);
     }
 
-    public static void addTransaction(Transaction transaction)
-    {
-        transactionList.add(transaction);
-    }
-
-    public static List<Transaction> getAlltransactions()
+    public  List<Transaction> getAlltransactions()
     {
         return transactionList;
     }

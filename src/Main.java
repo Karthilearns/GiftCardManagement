@@ -8,26 +8,23 @@ public class Main {
     {
         Scanner scans = new Scanner(System.in);
         int choice = 1;
-        System.out.println("already a user, if yes enter 1 , if no enter 0");
-        int isUser = scans.nextInt();
-        User user = null;
-        if(isUser!=1)
-        {
-            System.out.println("Enter name");
-            String name = scans.next();
-            user = new User(name);
-            Operations.addUser(user);
-
-        }
-        else {
-            System.out.println("enter user name");
-            String user_name = scans.next();
-            user = Operations.getUserByUserName(user_name);
-        }
+        System.out.println("enter your name");
+        User user=null;
+        String name = scans.next();
+        user = new User(name);
+        Operations.addUser(user);
 
         while (choice==1|| choice==2|| choice==3 || choice==4 || choice==5 || choice==6||choice==7)
         {
             System.out.println("enter choice");
+            System.out.println("enter 1 for creating a card");
+            System.out.println("2 for recharge");
+            System.out.println("3 for getting all transaction details");
+            System.out.println("4 for getting all your available gift cards");
+            System.out.println("5 for creating a new user or switching between users");
+            System.out.println("6 for getting a list of users");
+            System.out.println("7 for purchase");
+
             choice = scans.nextInt();
             switch (choice)
             {
@@ -77,15 +74,15 @@ public class Main {
                     if(userChoice==1)
                     {
                         System.out.println("Enter the name");
-                        String name = scans.next();
-                        user = new User(name);
+                        String names = scans.next();
+                        user = new User(names);
                         usersList.add(user);
                     }
                     else
                     {
                         System.out.println("ENTER USERNAME");
-                        String name = scans.next();
-                        user = Operations.getUserByUserName(name);
+                        String names = scans.next();
+                        user = Operations.getUserByUserName(names);
                     }
                     break;
                 case 6:
@@ -103,6 +100,7 @@ public class Main {
                         System.out.println(e.getKey()+" = "+e.getValue());
 
                     }
+                    System.out.println("enter your choice of card");
                     int purchaseChoice = scans.nextInt();
                     System.out.println("enter the amount needed for purchase");
                     int amountForPurchase = scans.nextInt();
